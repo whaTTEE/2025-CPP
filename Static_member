@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class BurgerShop {
+public:
+    static int totalSold;  // 정적 멤버 변수 (모든 가게가 공유)
+
+    void sellBurger() {
+        totalSold++;  // 햄버거 한 개 판매
+    }
+
+    static void showTotalSold() {  // 정적 멤버 함수
+        cout << "총 판매된 햄버거 개수: " << totalSold << endl;
+    }
+};
+
+// 정적 멤버 변수 초기화 (필수!)
+int BurgerShop::totalSold = 0;
+
+int main() {
+    BurgerShop shop1, shop2;
+
+    shop1.sellBurger();  // 가게 1에서 햄버거 1개 판매
+    shop2.sellBurger();  // 가게 2에서 햄버거 1개 판매
+
+    BurgerShop::showTotalSold();  // "총 판매된 햄버거 개수: 2" 출력
+
+    return 0;
+}
