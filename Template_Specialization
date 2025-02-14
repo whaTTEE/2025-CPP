@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+// 기본 템플릿 함수
+template <typename T>
+T add(T a, T b) {
+    return a + b;
+}
+
+// 템플릿 특수화: int 타입에 대해서만 다른 동작을 하게 만들기
+template <>
+int add<int>(int a, int b) {
+    cout << "정수에 대해서 특수화된 함수가 호출되었습니다!" << endl;
+    return a + b;
+}
+
+int main() {
+    int x = 5, y = 10;
+    double m = 3.5, n = 7.2;
+
+    // int 타입에 대해 특수화된 add 함수 호출
+    cout << "정수 더하기: " << add(x, y) << endl;  // 이건 특수화된 함수
+
+    // double 타입은 기본 템플릿 함수 사용
+    cout << "실수 더하기: " << add(m, n) << endl;  // 기본 템플릿 함수 사용
+
+    return 0;
+}
+
+// 특정 타입은 별도로 실행되는 동작을 정해줄 수 있다.
