@@ -27,4 +27,4 @@ int main() {
     return 0;
 }
 
-// 특정 타입은 별도로 실행되는 동작을 정해줄 수 있다.
+// *template specialization이란 특정 타입은 별도로 실행되는 동작을 정해줄 수 있다.
