@@ -15,4 +15,4 @@ int main()
     return 0;
 }
 
-bool 타입 true > 1 , false > 0
+// bool 타입 true > 1 , false > 0
