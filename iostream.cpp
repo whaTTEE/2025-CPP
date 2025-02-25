@@ -12,4 +12,4 @@ int main()
     return 0;
 }
 
-// CPP에서 iostream 은 표준 라이브러리로서, 입출력을 나타낸다. cin, cout등이 있다.
+// CPP에서 iostream 은 입출력 표준 라이브러리로서, cin, cout등이 있다.
